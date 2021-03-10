@@ -13,4 +13,4 @@ class Employee extends CompanyName {
   }   
 }     
 var emp = new Employee(1,"John");  
-document.writeln(emp.id+" "+emp.name+" "+emp.company);  
+console.log(emp.id+" "+emp.name+" "+emp.company);  
