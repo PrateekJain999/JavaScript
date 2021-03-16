@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "Buffer": "^0.0.0",
     "yargs": "^16.2.0"
   }
 }
