@@ -17,3 +17,4 @@ myEmitter.once('event', () => {
 myEmitter.emit('event');
 // Prints: 1
 myEmitter.emit('event');
+myEmitter.emit('event');

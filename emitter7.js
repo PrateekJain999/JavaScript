@@ -12,8 +12,8 @@ myEmitter.on('connection', ()=>{
 myEmitter.on('connection', callback);
 // ...
 myEmitter.emit('connection')
-myEmitter.removeListener('connection', callback);
-myEmitter.removeListener('connection', callback);
+myEmitter.removeAllListeners('connection');
+// myEmitter.removeListener('connection', callback);
 myEmitter.emit('connection')
 
 console.log("hi")

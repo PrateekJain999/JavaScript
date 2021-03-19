@@ -3,6 +3,7 @@ const event = require('events')
 const myEmitter = new event.EventEmitter();
 
 myEmitter.once('newListener', (event, listener) => {
+  console.log("newListener")
   if (event === 'event1') {
     // Insert a new listener in front
     myEmitter.on('event1', () => {
