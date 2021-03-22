@@ -9,7 +9,7 @@ console.log(buf1)
 // console.log(buf2.compare(buf1))
 
 // buf = new Buffer.alloc(256);
-// len = buf.write("Simply Easy Learning");
+// len = buf.write("Simply Easy0 Learning");
 
 // console.log("Octets written : "+  len);
 
