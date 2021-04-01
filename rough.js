@@ -1,7 +1,90 @@
-function checkFun(a, b, c){
-    console.log(this);
-    console.log(a);
-    console.log(b);
-    console.log(c);
+// const {MongoClient, ObjectID} = require('mongodb')
+
+// const connectionURL = 'mongodb://127.0.0.1:27017'
+// const databaseName = 'DB'
+// const id = new ObjectID()
+// console.log(id)
+
+// MongoClient.connect(connectionURL, {useNewUrlParser: true, useUnifiedTopology: true}, (error, client)=> {
+//     if(error){
+//         return console.log('Unable to Connect')
+//     }
+//     const db = client.db(databaseName)
+
+//     // const updatePromise = db.collection('users').updateMany({
+//     //     age: 21
+//     // },{
+//     //     $set:{
+//     //         name: 'Ram',
+//     //         age:22
+//     //     }
+//     // })
+
+//     // updatePromise.then((result) =>{
+//     //         console.log(result)
+//     // }).catch((error) =>{
+//     //     console.log(error)
+//     // })
+
+//     // db.collection('users').findOne({
+//     //     age: 21
+//     // },(error, result) =>{
+//     //         if(error){
+//     //             return console.log('Unable to insert data')
+//     //         }
+//     //         console.log(result)
+//     // })
+
+//     // db.collection('users').find({
+//     //     age: 21
+//     // }).toArray((error, result) => {
+//     //     console.log(result)
+//     // })
+
+//     // db.collection('users').insertOne({
+//     //     name:'Prateek jain',
+//     //     age: 21
+//     // },(error, result) =>{
+//     //         if(error){
+//     //             return console.log('Unable to insert data')
+//     //         }
+//     //         console.log(result)
+//     // })
+
+//     // db.collection('users').insertMany([
+//     // {
+//     //     name:'Prateek jain',
+//     //     age: 21
+//     // },{
+//     //     name:'Prasuk Jain',
+//     //     age: 20
+//     // }
+//     // ],(error, result) =>{
+//     //         if(error){
+//     //             return console.log('Unable to insert data')
+//     //         }
+//     //         console.log(result.ops)
+//     // })
+
+//     // db.collection('users').deleteOne({
+//     //     age: 20
+//     // }).then((result) =>{
+//     //         console.log(result)
+//     // }).catch((error) =>{
+//     //     console.log(error)
+//     // })
+
+//     // db.collection('users').deleteMany({
+//     //     age: 20
+//     // }).then((result) =>{
+//     //         console.log(result)
+//     // }).catch((error) =>{
+//     //     console.log(error)
+//     // })
+// })
+
+function a(x,y){
+    console.log(this.Name+x+y)
 }
-checkFun.apply(1,[2,3,4]);
+
+a.apply({Name:'Pk'},['jain','123'])
