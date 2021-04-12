@@ -359,6 +359,36 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true, useUnifiedTopology: 
         //         console.log(result);
         //     })
 
+        //========================================== Array Experssion ===============================================
+        // col.aggregate(
+        //     [
+        //         { $match: { 'firstName': 'Prashuk' } },
+        //         {
+        //             $project: {
+        //                 'arrayElemAt': { $arrayElemAt: ['$course', 0] },
+        //                 //'arrayToObject': {$arrayToObject: [['key', '$course']]},
+        //                 'concatArrays': { $concatArrays: ['$course', [1, 2, 3]] },
+        //                 'first': { $first: '$course' }, //{ $first: <expression> }
+        //                 'in': { $in: ['{}', '$course'] }, //{ $in: [ <expression>, <array expression>]}
+        //                 'indexOfArray': { $indexOfArray: ['$course', { 'CSE': { 'P': 83, 'C': 62, 'M': 61 } }] }, //{ $indexOfArray: [ <array expression>, <search expression>, <start>, <end> ] }
+        //                 'isArray': { $isArray: '$course' }, //{ $isArray: [ <expression> ] }
+        //                 'objectToArray': { $objectToArray: { $arrayElemAt: ['$course', 0] } }, //{ $objectToArray: <object> }
+        //                 'range': { $range: [0, 10, 2] }, //{ $range: [ <start>, <end>, <non-zero step> ] }
+        //                 'reverseArray': { $reverseArray: '$course' }, //{ $reverseArray: <array expression> }
+        //                 'size': { $size: '$course' }, //{ $size: <expression> }
+        //                 'slice': { $slice: ['$course', 3] }, //{ $slice: [ <array>, <position>, <n> ] }
+        //                 'map': { $map: { input: '$array', as: 'data', in: { $add: ['$$data', 2] } } }, //{ $map: { input: <expression>, as: <string>, in: <expression> } }
+        //                 'filter': { $filter: { input: '$array', as: 'data', cond: { $gte: ["$$data", 2] } } }, //{ $filter: { input: <array>, as: <string>, cond: <expression> } }
+        //                 'reduce': {
+        //                     $reduce: { input: '$array', initialValue: { sum: 0, product: 1 }, in: { sum: { $add: ["$$value.sum", "$$this"] }, product: { $multiply: ["$$value.product", "$$this"] } } }, //{$reduce: { input: <array>, initialValue: <expression>, in: <expression>
+        //                     //'zip': { $zip: { inputs: ['$array'], useLongestLength: true, defaults: ["a", "b", "c"] } } //{ $zip: { inputs: [ <array expression1>,  ... ], useLongestLength: <boolean>, defaults:  <array expression> }}
+        //                 }
+        //             }
+        //         }
+        //     ]).toArray((err, data) => {
+        //         console.log(data)
+        //     })
+
 
     })
 })
