@@ -12,7 +12,7 @@ async function main(x){
  async function delay(x){
     return new Promise((res,rej)=>{
        setTimeout(() => {
-          rej();
+          res();
        }, x);
     });
  }

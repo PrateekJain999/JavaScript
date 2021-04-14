@@ -38,7 +38,7 @@ var car = {
 function displayDetails(ownerName) {
     console.log(ownerName + ", this is your car: " + this.registrationNumber + " " + this.brand);
 }
-
+displayDetails()
 displayDetails.apply(car, ["Vivian"]); // Vivian, this is your car: GA12345 Toyota
 
 displayDetails.call(car, "Vivian"); // Vivian, this is your car: GA12345 Toyota
