@@ -29,8 +29,14 @@
         //     document.write(data);
         // });
         
+        // var socket = io();
+        // socket.on('connectToRoom', function (data) {
+        //     document.body.innerHTML = '';
+        //     document.write(data);
+        // });
+        
         var socket = io();
-        socket.on('connectToRoom', function (data) {
+        socket.on('connectionToRoom', function (data) {
             document.body.innerHTML = '';
             document.write(data);
         });

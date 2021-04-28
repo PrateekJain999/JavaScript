@@ -10,7 +10,7 @@ var roomno = 1;
 io.on('connection', function(socket) {
    
    //Increase roomno 2 clients are present in a room.
-   if(io.nsps['/'].adapter.rooms["room-"+roomno] && io.nsps['/'].adapter.rooms["room-"+roomno].length > 1) roomno++;
+   //if(io.nsps['/'].adapter.rooms["room-"+roomno] && io.nsps['/'].adapter.rooms["room-"+roomno].length > 1) roomno++;
    socket.join("room-"+roomno);
 
    //Send this event to everyone in the room.

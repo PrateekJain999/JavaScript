@@ -1,0 +1,27 @@
+socket.emit('message', "this is a test message"); //sending to sender-client only
+
+socket.broadcast.emit('message', "this is a test message"); //sending to all clients except sender
+
+socket.broadcast.to('coc').emit('message', 'well played'); //sending to all clients in 'coc' room(channel) except sender
+
+socket.to('coc').emit('message', 'enjoy the game'); //sending to sender client, only if they are in 'coc' room(channel)
+
+socket.broadcast.to(socketid).emit('message', 'this is confidential'); //sending to individual socketid
+
+io.emit('message', "this is a test message"); //sending to all clients, include sender
+
+io.in('coc').emit('message', 'good game'); //sending to all clients in 'coc' room(channel), include sender
+
+io.of('specificRoom').emit('message', 'good morning'); //sending to all clients in namespace 'specificRoom', include sender
+
+socket.emit(); //send to all connected clients
+
+socket.broadcast.emit(); //send to all connected clients except the one that sent the message
+
+socket.on(); //event listener, can be called on client to execute on server
+
+io.sockets.socket(); //for emiting to specific clients
+
+io.sockets.emit(); //send to all connected clients (same as socket.emit)
+
+io.sockets.on() ; //initial connection from a client.
