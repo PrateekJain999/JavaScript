@@ -17,8 +17,8 @@ socket.on('message', (data)=>{
 function click1()
 {    
     socket.emit("data", {
-        from: 'hey sexy',
-        text: 'hi baby'
+        from: 'hey',
+        text: 'hi'
     })
 };
 
